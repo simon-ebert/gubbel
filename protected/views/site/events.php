@@ -29,6 +29,10 @@ try {
             $i = 1
             ?>
 
+        <h1>Events</h1>
+        
+        <?php if (count($events->getItems())>0) { ?>
+        
             <table>
                 <tr>
                     <td>#</td>
@@ -62,6 +66,9 @@ try {
             <?php } ?>
             </table>
             <?php
+        }else{
+            echo '<p>There are currently no events</p>';
+        }
         }
         // We're not done yet. Remember to update the cached access token.
         // Remember to replace $_SESSION with a real database or memcached.
